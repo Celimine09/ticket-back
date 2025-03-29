@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "start": "node src/index.js",
-  "dev": "nodemon src/index.js"
-},
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --config jest.config.js",
+    "test:coverage": "jest --config jest.config.js --coverage",
+    "test:watch": "jest --config jest.config.js --watch",
+    "test:backend": "jest --config jest.config.backend.js",
+    "test:backend:watch": "jest --config jest.config.backend.js --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Celimine09/ticket-back.git"
@@ -27,6 +32,10 @@
     "mongoose": "^8.13.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.1.4",
+    "node-mocks-http": "^1.16.2",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.1.0"
   }
 }
